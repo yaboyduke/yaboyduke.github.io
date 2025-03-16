@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0;
+  z-index: 1000;
 }
 
 #nav-list {
@@ -51,6 +51,7 @@ body {
 #welcome-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 1000px;
   background-color: black;
@@ -59,7 +60,7 @@ body {
 
 #title {
   text-align: center;
-  margin: 150px auto 150px auto;
+  margin: 150px auto;
   padding-top: 30px;
   height: 150px;
   width: 100%;
@@ -103,10 +104,11 @@ body {
     transform: scale(0);
   }
 
-  50%{
+  50% {
     opacity: 0.5;
-    transform: scale(0.5)
+    transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -116,7 +118,7 @@ body {
 img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid grey;
@@ -129,19 +131,13 @@ img:hover {
 }
 
 #projects-div div {
-   display: flex;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: auto auto;
-   grid-auto-columns: 1fr;
-   justify-content: center;
-   align-items: stretch;
-   width: 85%;
-   height: 75vh;
-   margin-right: auto;
-   margin-left: auto;
-   gap: 1px;
-   padding: 5px;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 #projects-div {
@@ -219,9 +215,8 @@ li {
   font-size: 36px;
 }
 
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  
-  
   #nav-list {
     display: flex;
     flex-direction: column;
@@ -232,25 +227,21 @@ li {
     margin-top: 10px;
   }
 
-
   #title {
     font-size: 100px;
-    margin: 50px auto 50px auto;
+    margin: 50px auto;
   }
-
 
   #quote {
     font-size: 20px;
     padding: 30px;
   }
 
-  
   #subtitle {
     font-size: 40px;
     padding: 50px;
   }
 
-  
   .project-tile {
     width: 90%;
     height: auto;
@@ -259,34 +250,31 @@ li {
     margin-right: auto;
   }
 
- 
   #contact-title {
     font-size: 28px;
   }
 
-  
   #projects-div div {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    height: 460px;
-    margin-bottom: 25px;
+    height: auto;
   }
 
   #projects-div {
     width: 90%;
     margin: 0 auto;
   }
-  
+
   #profile-section {
-     height: 400px;
+    height: 400px;
   }
-  
+
   li {
     text-align: center;
     margin-right: 18px;
   }
-  
+
   #contact-title {
     text-align: center;
     margin: 0 auto;
@@ -296,7 +284,7 @@ li {
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   #title {
     font-size: 150px;
-    margin: 100px auto 100px auto;
+    margin: 100px auto;
   }
 
   #quote {
@@ -304,7 +292,6 @@ li {
     padding: 50px;
   }
 
-  
   #nav-list {
     display: flex;
     justify-content: center;
@@ -315,14 +302,12 @@ li {
     margin-top: 5px;
   }
 
-  
   .project-tile {
     width: 80%;
     height: auto;
     margin-top: 10px;
   }
 
-  
   #subtitle {
     font-size: 50px;
     padding: 150px;
@@ -344,11 +329,10 @@ li {
   }
 }
 
-
 @media screen and (min-width: 1201px) {
   #title {
     font-size: 200px;
-    margin: 150px auto 150px auto;
+    margin: 150px auto;
   }
 
   #quote {
@@ -371,7 +355,6 @@ li {
     width: 85%;
     margin: 0 auto;
   }
-
 
   nav li {
     margin-top: 5px;

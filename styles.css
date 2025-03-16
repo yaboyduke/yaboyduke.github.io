@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  
+  #nav-list {
+    list-style-type: none;
+    border-bottom: 2px solid white;
+    padding: 3px;
+  }
+  
+  nav li {
+    margin-top: 5px;
+    font-family: Montserrat, serif;
+  }
+  
+  nav li:hover {
+    border-bottom: 2px solid white;
+  }
+  
+  .nav-links:hover {
+    font-family: Montserrat, serif;
+    color: blue;
+    font-size: 20px;
+  }
+  
+  .nav-links:active {
+    font-family: Montserrat, serif;
+    color: yellow;
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: white;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+  }
+  
+  #welcome-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    color: white;
+  }
+  
+  #title {
+    text-align: center;
+    margin: 150px auto 150px auto;
+    padding-top: 30px;
+    height: 150px;
+    width: 100%;
+    font-family: "Spicy Rice", serif;
+    font-size: 200px;
+  }
+  
+  #title-p {
+    text-align: center;
+    font-family: Montserrat, serif;
+    font-weight: 5px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+  }
+  
+  #quote {
+    text-align: center;
+    font-family: Montserrat, serif;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    padding: 65px;
+    display: flex;
+  }
+  
+  #quote-author {
+    text-align: center;
+    font-family: Montserrat, serif;
+    margin-top: 15px;
+    padding: 50px;
+    width: 100%;
+    height: auto;
+  }
+  
+  @keyframes ease {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    50%{
+      opacity: 0.5;
+      transform: scale(0.5)
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid grey;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  img:hover {
+    animation: ease 0.5s forwards;
+    transform: scale(1.1);
+  }
+  
+  #projects-div div {
+     display: flex;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto auto;
+     grid-auto-columns: 1fr;
+     justify-content: center;
+     align-items: stretch;
+     width: 85%;
+     height: 75vh;
+     margin-right: auto;
+     margin-left: auto;
+     gap: 1px;
+     padding: 5px;
+     
+  }
+  
+  #projects-div {
+    text-align: center;
+  }
+  
+  #profile-section {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    background-color: rgba(200, 200, 200, 0.3);
+  }
+  
+  #subtitle {
+    text-align: center;
+    margin: 0 auto;
+    padding: 250px;
+    width: 100%;
+    font-family: Montserrat, serif;
+    font-size: 60px;
+  }
+  
+  #github-fa a {
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+  
+  #fcc-fa a {
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    font-family: Montserrat, serif;
+  }
+  
+  #contact-section {
+    display: block;
+  }
+  
+  #profile-link {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+  #contact-section {
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+  }
+  
+  li {
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  #contact-title {
+    display: block;
+    text-align: center;
+    font-family: Montserrat, serif;
+    padding: 15px;
+    font-size: 36px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    
+    #nav-list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    nav li {
+      margin-top: 10px;
+    }
+  
+  
+    #title {
+      font-size: 100px;
+      margin: 50px auto 50px auto;
+    }
+  
+  
+    #quote {
+      font-size: 24px;
+      padding: 30px;
+    }
+  
+    
+    #subtitle {
+      font-size: 40px;
+      padding: 50px;
+    }
+  
+    
+    .project-tile {
+      width: 90%;
+      height: auto;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+   
+    #contact-title {
+      font-size: 28px;
+    }
+  
+    
+    #projects-div div {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+  
+    #projects-div {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    #title {
+      font-size: 150px;
+      margin: 100px auto 100px auto;
+    }
+  
+    #quote {
+      font-size: 28px;
+      padding: 50px;
+    }
+  
+    
+    #nav-list {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    nav li {
+      margin-top: 5px;
+    }
+  
+    
+    .project-tile {
+      width: 80%;
+      height: auto;
+      margin-top: 10px;
+    }
+  
+    
+    #subtitle {
+      font-size: 50px;
+      padding: 150px;
+    }
+  
+    #contact-title {
+      font-size: 32px;
+    }
+  
+    #projects-div div {
+      flex-direction: row;
+      align-items: center;
+      margin: 0 auto;
+    }
+  
+    #projects-div {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1201px) {
+    #title {
+      font-size: 200px;
+      margin: 150px auto 150px auto;
+    }
+  
+    #quote {
+      font-size: 32px;
+      padding: 65px;
+    }
+  
+    #subtitle {
+      font-size: 60px;
+      padding: 250px;
+    }
+  
+    #projects-div div {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+  
+    #projects-div {
+      width: 85%;
+      margin: 0 auto;
+    }
+  
+  
+    nav li {
+      margin-top: 5px;
+    }
+  
+    #contact-title {
+      font-size: 36px;
+    }
+  }
